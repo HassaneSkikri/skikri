@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins' ,sans-serif ;  /*poppins   Source Sans Pro */
+    scroll-behavior: smooth;
+    text-decoration:  none;
+
+}
+
+body{
+    color: #fff;
+}
+
+.header{
+    position: fixed;/* static absolute relative*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 7%;
+    background: transparent;
+    display: flex;/* flexible to the container header all the element place side by side into the header container::inline-flex mean that the children tack only the space that they need:: inline:side by side  like span ,there is also inline-block*/
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo  {
+    color: #0ef ;
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.navbar a{
+    color: #fff;
+    padding: 10px 20px;
+    display:inline-block;
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: 0.2s;
+}
+
+.navbar a:hover{
+    color: #0ef ;
+    text-shadow: 0 0 10px rgba(18,247,255,0.6),
+    0 0 20px rgba(18,247,255,0.6),
+    0 0 30px rgba(18,247,255,0.6),
+    0 0 40px rgba(18,247,255,0.6),
+    0 0 70px rgba(18,247,255,0.6),
+    0 0 80px rgba(18,247,255,0.6),
+    0 0 100px rgba(18,247,255,0.6),
+    0 0 120px rgba(18,247,255,0.6);
+}
+section{
+    padding: 100px 7% 0;
+}
+/*_______________menu icone_________________*/
+#menu-icon{
+    font-size: 1.8rem;
+    z-index: 1000;
+    cursor: pointer;
+    margin-left: 25px;
+    background: rgb(7, 125, 134);
+    border-radius: 25%;
+    display: none;
+}
+/*_______________home section_________________*/
+.home{
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns:  repeat(2,1fr); /*create two column with the same langth*/
+    align-items: center; 
+    background: url(photos/background.png) no-repeat;
+    background-size: cover; 
+    background-position: center;/*tack all the screen*/
+}
+/*
+hover-color : #12f7ff
+text-color : #f5f5f5
+bg color #250821
+big font 2.5rem
+norma font 2 rem
+neon-box-shadow 0 0 .5rem #12f7ff
+*/
+.home-content{
+    max-width: 600px;
+}
+.home-content h1{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.skills{
+    font-size: 1.5rem;
+    font-weight:600 ; 
+}
+.skills h3{
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+}
+.skills h3 .word{
+    position: absolute;
+    color: #0ef;
+    display: flex;
+    opacity: 0 ;
+}
+.skills h3 .word .letter{
+    transform-origin: center center 25px;
+}
+
+.skills h3 .word .letter.out{
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6,0,0.7,0.2);/*1 and 2 start point 3 4 end points*/
+}
+.skills h3 .word .letter.in{ 
+    transition: 0.38s ease;
+}
+.skills h3 .word .letter.behind{
+    transform: rotateX(-90deg);
+} 
+
