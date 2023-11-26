@@ -9,10 +9,12 @@
     scroll-behavior: smooth;
     text-decoration:  none;
 
+
 }
 
 body{
     color: #fff;
+    background: #081b29;
 }
 
 .header{
@@ -57,7 +59,7 @@ body{
     0 0 120px rgba(18,247,255,0.6);
 }
 section{
-    padding: 100px 7% 0;
+    padding: 150px 7% 0;
 }
 /*_______________menu icone_________________*/
 #menu-icon{
@@ -71,15 +73,14 @@ section{
 }
 /*_______________home section_________________*/
 .home{
+    position: relative;
     min-height: 100vh;
     height: 100%;
     width: 100%;
-    display: grid;
-    grid-template-columns:  repeat(2,1fr); /*create two column with the same langth*/
+    justify-content: space-betweens;
+    display: flex;
+    grid-template-columns:  repeat(1,2fr); /*create two column with the same langth*/
     align-items: center; 
-    background: url(photos/background.png) no-repeat;
-    background-size: cover; 
-    background-position: center;/*tack all the screen*/
 }
 /*
 hover-color : #12f7ff
@@ -92,14 +93,23 @@ neon-box-shadow 0 0 .5rem #12f7ff
 .home-content{
     max-width: 600px;
 }
+.home-content h3{
+    font-size: 30px;
+    font-weight: 700;
+}
 .home-content h1{
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-size: 50px;
+    font-weight: 700;
+    margin: -1rem 0;
 }
 
 .skills{
     font-size: 1.5rem;
     font-weight:600 ; 
+    margin: 0 0 1.1rem 0;
+}
+.home-content p{
+    margin: 0 0 2.5rem 0;
 }
 .skills h3{
     display: inline-flex;
@@ -127,3 +137,140 @@ neon-box-shadow 0 0 .5rem #12f7ff
     transform: rotateX(-90deg);
 } 
 
+
+
+.home-content p{
+    color: #bdbdbd;
+    line-height: 1.6;
+}
+
+/* btn-box */
+
+.btn-box{
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    height: 45px;
+}
+
+
+.btn-box a.btn{
+    display: inline-flex;
+    justify-content:center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    margin: -2rem 0 1rem;
+    background: #12f7ff;
+    color: #250821;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight:600 ;
+    transition: .6s;
+    box-shadow: 0 0 .5rem #12f7ff;
+    border-radius: 6px;
+    position: relative;overflow: hidden;  /*any part of the paragraph that goes outside the div will be hidden.*/
+    z-index: 1;
+    border: 2px solid #12f7ff ;
+}
+a.btn:hover{
+    color: #12f7ff;
+}
+
+a.btn::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:  #250821;/*this background will apply when it hover into the shap*/
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .4s;
+}
+a.btn:hover::before{
+    width: 100%;
+}
+
+/* Social icones*/
+
+
+.social{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    height: 40px;
+}
+
+.social a{
+    display: inline-flex;
+    width: 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: #250821;
+    color: #12f7ff;
+    border: 2px solid #12f7ff;
+    transition: .6s;
+    box-shadow: 0 0 0.3rem #12f7ff;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+}
+.social a i{
+    font-size: 1.5rem;
+}
+.social a:hover{
+    color: #250821;
+}
+.social a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #12f7ff;
+    transition: .6s;
+    z-index: -1;
+}
+.social a:hover::before{
+    width: 100%;
+}
+
+.home-img{
+    position: relative;
+    left: 7%;
+    margin-top: -5rem;
+    z-index: 1;
+
+}
+.box-img{
+    text-align: center;
+}
+.box-img img{
+
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border: 1px solid transparent;
+    border-radius: 100% 100%;
+
+}
+
+.shape-home-img{
+    position: absolute;
+    left: -25%;
+    width: 140%;
+    height: 140%;
+    z-index: -1;
+    top: 10%;
+}
+
+.shape-home-img:nth-child(2){
+    filter: blur(50px);
+
+}
